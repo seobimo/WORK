@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback</h1>
+    <p id="tj01">tj더좋은<b>구로디지털단지</b>구로캠퍼스</p>
+    <p id="tj02">tj더좋은<b>강남역</b>강남캠퍼스</p>
+    <button id="btn1">이전글자/새로운글자</button>
+    <button id="btn2">이전태그/새로운태그</button>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                $("#tj01").text(function(i,originalText){
+                    return "이전글자:"+originalText+"새로운글자:안녕하세요(index:"+i+")";
+                });
+            });
+            $("#btn2").on("click",function(){
+                $("#tj02").html(function(i,originalText){
+                    return "이전태그:"+originalText+"새로운태그:안녕하세요<b>강남역사</b>(index:"+i+")";
+                });
+            });
+        });    
+    </script>
+</body>
+</html>

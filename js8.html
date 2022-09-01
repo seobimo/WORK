@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #box{
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        #tj01{
+            padding: 50px;
+            box-sizing: border-box;
+            background-color: rgb(220, 255, 255);
+        }
+        #fa-solid fa-angle-down{text-align: left;}
+    </style>
+    <script src="https://kit.fontawesome.com/b12441bc7c.js" crossorigin="anonymous"></script>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">OneUI Ver.
+    </div>
+    <h3 id="tj01">Android/OneUI ver
+    <ul>
+        <li>Android 9(P)/OneUI 1.0~1.5</li>
+        <li>Android 10(Q)/OneUI 2.0~3.0</li>
+        <li>Android 11-12(R,S)/OneUI 3.0~4.0(recent.)</li>
+        <li>Android 13(T)/OneUI 5.0(BETA)</li>
+
+    </ul>
+    </h3>
+    <i class="fa-solid fa-angle-down"></i>
+    <script>
+            $(function(){
+                $("#box").on("click",function(){
+                    $("#tj01").slideToggle("slow");
+                    $("#fa-solid fa-angle-down").slideDown("slow");
+                });
+            });
+    </script>
+</body>
+</html>

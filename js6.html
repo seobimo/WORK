@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #div1{width: 80px; height: 80px; display: none; background-color: red;}
+    #div2{width: 80px; height: 80px; display: none; background-color: green;}
+    #div3{width: 80px; height: 80px; display: none; background-color: blue;}
+
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="div1">toggle 1</p>
+    <p id="div2">toggle 2</p>
+    <p id="div3">toggle 3</p>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <script>
+        $(function(){
+            $("#fadeIn").on("click",function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+        });
+        $(function(){
+            $("#fadeOut").on("click",function(){
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+        $(function(){
+            $("#fadeToggle").on("click",function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+        });
+    </script>
+</body>
+</html>

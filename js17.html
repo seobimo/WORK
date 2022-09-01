@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="https://www.tjoeun.co.kr/" id="tj01">www.tjoeun.co.kr</a></p>
+    <button>버튼 클릭 시 속성변경</button>
+    <script>
+        $(function(){
+            $("button").on("click",function(){
+                $("tj01").attr("href",function(i,originValue){
+                return originValue + "front/helpdesk/counsel_timetable.asp";
+            });
+        });
+    });   
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>tj1</p>
+    <p>Guro</p>
+    <p><img id="tj01"  src="images/coffee.gif"></p>
+    <ol>
+        <li>tj1</li>
+        <li>tj2</li>
+    </ol>
+    <button id="btn1">글자 뒤에 추가</button>
+    <button id="btn2">리스트에 추가</button>
+    <button id="btn3">이미지 추가</button>
+
+    <script>
+        $(function(){
+            $("#btn").on("click",function(){
+                $("p").append("<b>구로캠퍼스</b>");
+            });
+            $("#btn2").on("click",function(){
+                $("ol").append("<li>구로캠퍼스</li>");
+            });
+            $("#btn3").on("click",function(){
+                $("#tj01").append("<img src="images/coffee.gif>");
+        });
+    </script>
+
+</body>
+</html>

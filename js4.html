@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<lang lang="en">
+<head>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>사라지게 하고 보여지게 할수 있다</p>
+    <img src="Images/coffee.gif">
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <script>
+        $(function(){
+            $("#hide").on("click",function(){
+                $("p").hide(1000);
+                $("img").hide(1000);
+            });
+            $("#show").on("click",function(){
+                $("p").show(1000);
+                $("img").show(1000);
+            });
+        });
+        /*$(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });*/
+    </script>
+</body>
+</html>

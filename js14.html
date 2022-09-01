@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="tj01">inst1</p>
+    <p id="tj02">display</p>
+    <p>text상자 안에 글자 입력:<input type="text" id="test" value="MickeyMouse"></p>
+    <button id="btn1">글자 입력</button>
+    <button id="btn2">글자와 태그 입력</button>
+    <button id="btn3">상자에 글자 입력</button>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                $("#tj01").text("텍스트1");
+            });
+            $("#btn2").on("click",function(){
+                $("#tj02").html("텍스트2");
+            });
+            $("#btn3").on("click",function(){
+                $("#test").val("텍스트3");
+            });
+        });
+    </script>
+
+</body>
+</html>

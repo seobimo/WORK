@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #div1{width: 80px; height: 80px; display: none; background-color: red;}
+    #div2{width: 80px; height: 80px; display: none; background-color: green;}
+    #div3{width: 80px; height: 80px; display: none; background-color: blue;}
+
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="div1">toggle 1</p>
+    <p id="div2">toggle 2</p>
+    <p id="div3">toggle 3</p>
+    <button id="fadeTo">fadeTo</button>
+    <script>
+        $(function(){
+            $("#fadeTo").on("click",function(){
+                $("#div1").fadeTo("slow",0.15);
+                $("#div2").fadeTo("slow",0.4);
+                $("#div3").fadeTo("slow",0.7);
+            });
+        });
+    </script>
+</body>
+</html>

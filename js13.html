@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-1.10.2.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>COMPOSE COFFEE</b></h1>
+    <p id="tj01">Name:<input type="text" id="tj02" value="Buzz lightyear"></p>
+    <p><a id="tj03" href="http://www.youtube.com"></a>Youtube</p>
+    <p id="tj04"><img src="Images/cafelatte.jpg" alt="카페라떼"></p>
+    <button id="btn1">버튼 글자 <글자> 불러오기</button>
+    <button id="btn2">Name: 의 태그 불러오기</button>
+    <button id="btn3">value 불러오기</button>
+    <button id="btn4">링크(attr속성) 불러오기</button>
+    <button id="btn5">이미지(attr속성) 불러오기</button>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                alert("글자"+$("tj01").text());
+            });
+            $("#btn2").on("click",function(){
+                alert("태그:"+$("tj02").html());
+            });
+            $("#btn3").on("click",function(){
+                alert("value:"+$("tj02").val());
+            });
+            $("#btn4").on("click",function(){
+                alert("attr속성값:"+$("tj03").attr("href"));
+            });
+            $("#btn5").on("click",function(){
+                alert("attr속성값:"+$("tj04").attr("src"));
+        });
+    });   
+    </script>
+</body>
+</html>
